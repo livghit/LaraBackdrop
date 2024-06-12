@@ -2,8 +2,8 @@
 
 namespace LivGhit\LaraBackdrop;
 
-use App\View\Components\Dotted;
 use LivGhit\LaraBackdrop\Commands\LaraBackdropCommand;
+use LivGhit\LaraBackdrop\Components\Dotted;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,6 +19,7 @@ class LaraBackdropServiceProvider extends PackageServiceProvider
         $package
             ->name('larabackdrop')
             ->hasConfigFile()
+            ->hasRoutes('larabackdrop')
             ->hasViews('LaraBackdrop')
             ->hasViewComponents('larabackdrop', Dotted::class)
             ->hasMigration('create_larabackdrop_table')

@@ -1,6 +1,7 @@
 <?php
 
-namespace App\View\Components;
+
+namespace LivGhit\LaraBackdrop\Components;
 
 use Illuminate\View\Component;
 
@@ -23,6 +24,6 @@ class Dotted extends Component
      */
     public function render()
     {
-        return view('components.dotted');
+        return view('LaraBackdrop::components.dotted');
     }
 }
