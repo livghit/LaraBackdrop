@@ -4,6 +4,7 @@ namespace LivGhit\LaraBackdrop;
 
 use LivGhit\LaraBackdrop\Commands\LaraBackdropCommand;
 use LivGhit\LaraBackdrop\Components\Dotted;
+use LivGhit\LaraBackdrop\Components\SmallGrid;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -21,8 +22,17 @@ class LaraBackdropServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasRoutes('larabackdrop')
             ->hasViews('LaraBackdrop')
-            ->hasViewComponents('larabackdrop', Dotted::class)
+            ->hasViewComponents('larabackdrop',
+                Dotted::class,
+                SmallGrid::class)
             ->hasMigration('create_larabackdrop_table')
             ->hasCommand(LaraBackdropCommand::class);
+    }
+
+    private function viewComponents()
+    {
+        return [
+
+        ];
     }
 }

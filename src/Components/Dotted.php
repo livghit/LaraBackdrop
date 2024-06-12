@@ -1,6 +1,5 @@
 <?php
 
-
 namespace LivGhit\LaraBackdrop\Components;
 
 use Illuminate\View\Component;
