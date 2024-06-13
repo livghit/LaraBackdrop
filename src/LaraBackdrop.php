@@ -3,8 +3,8 @@
 namespace LivGhit\LaraBackdrop;
 
 use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use RuntimeException;
 
 class LaraBackdrop
@@ -17,7 +17,7 @@ class LaraBackdrop
     protected $css = [__DIR__.'/../dist/larabackdrop.css'];
 
     /**
-     * Register or return CSS for the Pulse dashboard.
+     * Register or return CSS for the LaraBackdrop components.
      *
      * @param  string|Htmlable|list<string|Htmlable>|null  $css
      */
@@ -34,7 +34,7 @@ class LaraBackdrop
                 return $carry.Str::finish($css->toHtml(), PHP_EOL);
             } else {
                 if (($contents = @file_get_contents($css)) === false) {
-                    throw new RuntimeException("Unable to load Pulse dashboard CSS path [$css].");
+                    throw new RuntimeException("Unable to load LaraBackdrop CSS : [$css].");
                 }
 
                 return $carry."<style>{$contents}</style>".PHP_EOL;
