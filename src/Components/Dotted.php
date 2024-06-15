@@ -11,8 +11,9 @@ class Dotted extends Component
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct(
+        public $dark = false
+    ) {
         //
     }
 
@@ -23,6 +24,8 @@ class Dotted extends Component
      */
     public function render()
     {
-        return view('LaraBackdrop::components.dotted');
+        return $this->dark ?
+            view('LaraBackdrop::components.dotted-dark') :
+            view('LaraBackdrop::components.dotted');
     }
 }

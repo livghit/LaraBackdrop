@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/larabackdrop', function(){
+Route::get('/', function(){
     return view('LaraBackdrop::larabackdrop');
 });
